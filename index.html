@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEO Website Checker</title>
+    <title>Neo SEO Analyzer</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="container">
-        <h1>Professional SEO Checker</h1>
-        <p>Enter your website URL to analyze performance and SEO metrics.</p>
-        <input type="text" id="urlInput" placeholder="https://example.com" required>
-        <button id="checkButton">Check SEO</button>
+        <h1>Neo SEO Analyzer</h1>
+        <p>Scan your site for cutting-edge SEO insights.</p>
+        <input type="text" id="urlInput" placeholder="Enter URL: https://example.com" required autofocus>
+        <button id="checkButton">Initiate Scan</button>
         <div id="results" class="results"></div>
     </div>
+    <canvas id="particles"></canvas>
     <script src="script.js"></script>
 </body>
 </html>
+
