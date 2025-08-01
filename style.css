@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+    animation: neonBackground 10s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+@keyframes neonBackground {
+    0% { background: linear-gradient(45deg, #0f0c29, #302b63, #24243e); }
+    33% { background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d); }
+    66% { background: linear-gradient(45deg, #00b4db, #0083b0, #0f0c29); }
+    100% { background: linear-gradient(45deg, #0f0c29, #302b63, #24243e); }
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    text-align: center;
+    max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+input {
+    width: 80%;
+    padding: 15px;
+    margin: 20px 0;
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    font-size: 1.2em;
+    outline: none;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+#checkButton {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background: transparent;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #ff0000, #00ff00, #0000ff) 1;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(255, 0, 0, 0.5);
+    transform: perspective(500px) rotateX(10deg);
+    animation: rgbShift 2s infinite;
+}
+
+@keyframes rgbShift {
+    0% { border-image: linear-gradient(45deg, #ff0000, #00ff00, #0000ff) 1; }
+    33% { border-image: linear-gradient(45deg, #00ff00, #0000ff, #ff0000) 1; }
+    66% { border-image: linear-gradient(45deg, #0000ff, #ff0000, #00ff00) 1; }
+    100% { border-image: linear-gradient(45deg, #ff0000, #00ff00, #0000ff) 1; }
+}
+
+#checkButton:hover {
+    transform: perspective(500px) rotateX(0deg) scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 1);
+}
+
+.results {
+    margin-top: 30px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
